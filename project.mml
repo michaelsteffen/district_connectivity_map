@@ -1,0 +1,110 @@
+{
+  "bounds": [
+    -171.5625,
+    19.3111,
+    -48.5156,
+    73.2267
+  ],
+  "center": [
+    -98.4375,
+    37.1603,
+    1
+  ],
+  "format": "png",
+  "interactivity": {
+    "layer": "block2xnces",
+    "template_teaser": "<b>{{{nces_name}}}</b> (NCES)<br>\n<b>{{{ffl_name}}}</b> (471)<br>\n<strong>Data Quality (1-4, 1 best):</strong> {{{data_quality_score}}}<br>\n<strong>Number of sites:</strong> {{{min_sites_schools}}}<br>\n<strong>Likely fiber percent (sites >50 Mbps):</strong> {{{pct_bldgs_gt50_label}}} \n",
+    "fields": [
+      "nces_name",
+      "ffl_name",
+      "data_quality_score",
+      "min_sites_schools",
+      "pct_bldgs_gt50_label"
+    ]
+  },
+  "minzoom": 0,
+  "maxzoom": 9,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "id": "countries",
+      "name": "countries",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "geometry": "polygon",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-countries.zip",
+        "type": "shape"
+      }
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -165.96561893930925,
+        -50.6696248183775,
+        176.0938293028783,
+        81.95527752537252
+      ],
+      "id": "10mlakes",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/physical/10m-lakes.zip",
+        "id": "10mlakes",
+        "project": "District_connections",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "10mlakes"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -139.04719194227846,
+        -49.25074024841062,
+        178.44862226797608,
+        81.13822602001463
+      ],
+      "id": "10madmin1statesprovi",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-1-states-provinces-lines.zip",
+        "id": "10madmin1statesprovi",
+        "project": "District_connections",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "10madmin1statesprovi"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -170.2818,
+        30.624774,
+        -83.200531,
+        71.299926
+      ],
+      "id": "block2xnces",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/michael.steffen/Desktop/Temp/Block2xNCES.csv"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "block2xnces"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "School District Connectivity",
+  "description": "Connectivity of school districts based on form 471 block 2 data",
+  "legend": "<div class='my-legend'>\n<div class='legend-title'>District Fiber (Block 2 data)</div>\n<div class='legend-scale'>\n  <ul class='legend-labels'>\n    <li><span style='background:#D7191C;'></span>0-25%</li>\n    <li><span style='background:#df8a35;'></span>25-50%</li>\n    <li><span style='background:#2C7BB6;'></span>50-75%</li>\n    <li><span style='background:#020b55;'></span>75-100%</li>\n  </ul>\n</div>\n<div class='legend-explanation'>\nGreyed-out districts have bad data / no data <br>\nSize proportional to number of schools at zoom > 3</div>\n</div>\n\n<style type='text/css'>\n  .my-legend .legend-title {\n    text-align: left;\n    margin-bottom: 8px;\n    font-weight: bold;\n    font-size: 90%;\n    }\n  .my-legend .legend-scale ul {\n    margin: 0;\n    padding: 0;\n    float: left;\n    list-style: none;\n    }\n  .my-legend .legend-scale ul li {\n    display: block;\n    float: left;\n    width: 60px;\n    margin-bottom: 6px;\n    text-align: center;\n    font-size: 80%;\n    list-style: none;\n    }\n  .my-legend ul.legend-labels li span {\n    display: block;\n    float: left;\n    height: 15px;\n    width: 60px;\n    }\n  .my-legend .legend-explanation {\n    font-size: 80%;\n    clear: both;\n    }\n  .my-legend a {\n    color: #777;\n    }\n</style>",
+  "attribution": "",
+  "version": "0.0.1"
+}
