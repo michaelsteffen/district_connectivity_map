@@ -1,4 +1,4 @@
-Map {
+/*Map {
   background-color: #b8dee6;
 }
 
@@ -24,7 +24,7 @@ Map {
     line-width: .25;
     line-color: #85c5d3;
   }
-}
+} */
 
 #block2xnces {
   marker-fill:#e0dfdf;
@@ -53,12 +53,12 @@ Map {
   	[min_sites_schools > 25]  { marker-width: [min_sites_schools]/5; }
   }
   
-  [data_quality_score = 4] { marker-fill:#e0dfdf; }
-  [data_quality_score < 4] { 
-    [pct_bldgs_gt50 >= 0] { marker-fill:rgb(215, 25, 28); }
-    [pct_bldgs_gt50 >.25] { marker-fill:#df8a35; }
-    [pct_bldgs_gt50 >.5] { marker-fill:rgb(44, 123, 182); }
-    [pct_bldgs_gt50 >.75] { marker-fill:#020b55; }
+  //adjust threshold for different layers
+  [data_quality_score <= 3] { 
+    [pct_bldgs_gt50_alt >= 0] { marker-fill:rgb(215, 25, 28); }
+    [pct_bldgs_gt50_alt >.25] { marker-fill:#df8a35; }
+    [pct_bldgs_gt50_alt >.5] { marker-fill:rgb(44, 123, 182); }
+    [pct_bldgs_gt50_alt >.75] { marker-fill:#020b55; }
   }  	
 }
 
